@@ -16,6 +16,10 @@ func (s *Shell) help() {
 
 //
 func defaultHelpInfo(command []Command) {
+	if len(command) == 1 {
+		fmt.Printf(strconv.Itoa(command[0].ID) + ") " + command[0].Name + "\n")
+		return
+	}
 	for i := 0; i < len(command); i++ {
 		fmt.Printf(strconv.Itoa(command[i].ID) + ") " + command[i].Name)
 		if i == len(command) {
