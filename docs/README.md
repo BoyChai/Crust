@@ -1,23 +1,16 @@
-# Crust
+# 快速开始
 
-## 概述
-
-GO语言命令行解释器，测试开发阶段
-文档地址：http://crust.boychai.xyz/
-
-## 快速开始
-
-### 要求
+## 要求
 
 - go 1.18以上
 
-### 安装
+## 安装
 
 ```
 $ go get -u github.com/BoyChai/Crust
 ```
 
-### 使用
+## 使用
 
 首先，创建一个名为`example.go`：
 
@@ -50,9 +43,9 @@ $ go run .\example.go
 
 
 
-##  基础
+#  基础
 
-### 创建命令
+## 创建命令
 
 通过下代码创建一个命令并导入到Crust里：
 
@@ -93,7 +86,7 @@ $ go run .\example.go
 >
 ```
 
-### 输出帮助信息
+## 输出帮助信息
 
 默认Crust提供了输出信息的指令，输入help即可进行输出，代码如下：
 
@@ -142,7 +135,7 @@ $ go run .\example.go
 > 
 ```
 
-### 前缀和分割
+## 前缀和分割
 
 - Crust的组成
 
@@ -202,9 +195,9 @@ $
 $ 
 ```
 
-## 进阶
+# 进阶
 
-### 命令匹配策略
+## 命令匹配策略
 
 func (s *Shell) SetExplainType(explainType string)
 
@@ -212,7 +205,7 @@ func (s *Shell) SetExplainType(explainType string)
 
 > func (s *Shell) SetExplainType(explainType string)
 
-### 启动输出帮助信息
+## 启动输出帮助信息
 
 默认启动时是不输出帮助信息的，想要启动时输出可通过下面函数来实现：
 
@@ -264,7 +257,7 @@ $ go run .\example.go
 >
 ```
 
-### 指定帮助信息输出格式
+## 指定帮助信息输出格式
 
 默认的帮助信息输出只会2个一行，可以通过以下函数来修改：
 
@@ -313,7 +306,7 @@ $ go run .\example.go
 
 
 
-### 自定义帮助信息
+## 自定义帮助信息
 
 帮助信息可以自己进行定义，默认是通过下面方法实现的
 
@@ -358,12 +351,12 @@ $ go run .\example.go
 
 
 
-## 其他
+# 其他
 
-### 获取全部命令集
+## 获取全部命令集
 
 > func GetAllCommand() []Command
 
-### 获取全部命令绑定函数
+## 获取全部命令绑定函数
 
 > func GetAllCMDFunction() []FunctionBinDing

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  docsify-crust:
+    container_name: docsify-crust
+    image: docsify
+    volumes:
+      - "/Docker/network-control/Docsify/Crust:/app"
+networks:
+  default:
+    external:
+      name: network-control
+                  
