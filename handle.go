@@ -60,6 +60,8 @@ func (s *Shell) explain(action string) error {
 				if action == strconv.Itoa(cmd[i].ID) {
 					s.implement(i)
 					return nil
+				} else {
+					return errors.New(action + " command not found")
 				}
 			}
 
@@ -72,6 +74,8 @@ func (s *Shell) explain(action string) error {
 				if action == cmd[i].Alias {
 					s.implement(i)
 					return nil
+				} else {
+					return errors.New(action + " command not found")
 				}
 			}
 		case "any":
@@ -87,10 +91,12 @@ func (s *Shell) explain(action string) error {
 				if action == cmd[i].Alias {
 					s.implement(i)
 					return nil
+				} else {
+					return errors.New(action + " command not found")
 				}
 			}
 		default:
-			return errors.New("command not found")
+			return errors.New("unknown command policy")
 		}
 	}
 
